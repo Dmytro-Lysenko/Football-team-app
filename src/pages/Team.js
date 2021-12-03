@@ -8,7 +8,18 @@ const Team = (props) => {
   console.log(teamCtx);
 
   if (teamCtx.totalTeamPlayers === 0) {
-    return <p>There are no players in team</p>;
+    return (
+      <p
+        style={{
+          textAlign: "center",
+          fontSize: "2rem",
+          color: "#ffffff",
+          padding: "2rem",
+        }}
+      >
+        There are no players in team
+      </p>
+    );
   } else {
     content = <PlayerList players={teamCtx.teamPlayers} />;
   }

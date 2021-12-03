@@ -22,7 +22,6 @@ const AddPlayer = () => {
 
   return (
     <div>
-      <h1>Add player</h1>
       <AddPlayerForm onAddPlayer={onAddPlayerHandler} />
     </div>
   );

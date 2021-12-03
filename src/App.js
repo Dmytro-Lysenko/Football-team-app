@@ -7,6 +7,7 @@ import ActivePlayers from "./pages/ActivePlayers";
 import AddPlayer from "./pages/AddPlayer";
 import Header from "./components/UI/Header";
 import { Fragment } from "react";
+import Layout from "./components/layout/Layout";
 
 function App() {
   return (
@@ -14,13 +15,13 @@ function App() {
       <TeamContextProvider>
         <AllPlayersContextProvider>
           <Header />
-          <div>
+          <Layout>
             <Routes>
               <Route path="/" element={<ActivePlayers />} exact></Route>
               <Route path="/team" element={<Team />}></Route>
               <Route path="/add-player" element={<AddPlayer />}></Route>
             </Routes>
-          </div>
+          </Layout>
         </AllPlayersContextProvider>
       </TeamContextProvider>
     </Fragment>

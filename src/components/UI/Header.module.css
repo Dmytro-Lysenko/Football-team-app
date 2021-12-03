@@ -1,0 +1,25 @@
+.header {
+  background-color: #35874b;
+}
+
+.header ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.header li {
+  list-style: none;
+}
+
+.header li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.header li a:hover,
+.header li a:active {
+  color: #c7b8b8;
+}

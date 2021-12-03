@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import classes from "./AddPlayerForm.module.css";
 
 const AddPlayerForm = (props) => {
   const nameInputRef = useRef();
@@ -24,21 +25,22 @@ const AddPlayerForm = (props) => {
   };
 
   return (
-    <div>
-      <form onSubmit={submitHandler}>
-        <div>
+    <div >
+      <h1 className={classes.title}>Add new football player</h1>
+      <form className={classes.form} onSubmit={submitHandler}>
+        <div className={classes.control}>
           <label htmlFor="name">Name:</label>
-          <input type="text" id="name" ref={nameInputRef} />
+          <input type="text" id="name" ref={nameInputRef} required />
         </div>
-        <div>
+        <div className={classes.control}>
           <label htmlFor="position">Position:</label>
-          <input type="text" id="position" ref={positionInputRef} />
+          <input type="text" id="position" ref={positionInputRef} required />
         </div>
-        <div>
+        <div className={classes.control}>
           <label htmlFor="photo">Photo:</label>
-          <input type="url" id="photo" ref={photoInputRef} />
+          <input type="url" id="photo" ref={photoInputRef} required />
         </div>
-        <div>
+        <div className={classes.actions}>
           <button>Add player</button>
         </div>
       </form>
