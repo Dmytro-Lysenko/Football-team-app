@@ -43,13 +43,15 @@ const PlayerItem = (props) => {
     <div className={classes.container}>
       <h2>{props.name}</h2>
       <h1>{props.position}</h1>
-      <img src={props.photo} alt={props.name} />
-      <div>
+      <div className={classes.image}>
+        <img src={props.photo} alt={props.name} />
+      </div>
+      <div className={classes.actions}>
         <button onClick={addToTeamHandler}>
           {!playerIsInTeam ? "Add to team" : "Remove from team"}
         </button>
         <button>Remove</button>
-        <input onClick={() => selectHandler(props.id)} type="checkbox" />
+        {!playerIsInTeam && <input onClick={() => selectHandler(props.id)} type="checkbox" />}
       </div>
     </div>
   );
